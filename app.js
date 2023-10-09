@@ -29,10 +29,12 @@ fetch('https://the-prisoner-api.vercel.app/episodes')
                     <a href=${item.imdb} rel='noopener noreferrer' target='_blank'>IMDb</a> 
                     <p class='narration'><strong>Wikipedia Storyline: </strong>${item.wikipedia_storyline}</p>
                     <p class='narration'><strong>IMDb Storyline: </strong>${item.imdb_storyline}</p>
-                    <p class='narration'><strong>Trivia: </strong>${item.trivia}</p>
                     <img id='image' src=${item.img} alt='${item.title}' title='${item.title}' />
+                    <p class='narration'><strong>Directed by: </strong>${item.directed_by}</p>
+                    <p class='narration'><strong>Written by: </strong><br />${item.written_by.join("<br />")}</p>
                     <p class='narration'><strong>Cast: </strong>${item.cast}</p>
                     <p class='narration'><strong>Guest Appearances: </strong><br />${item.guest_appearances.join("<br />")}</p>
+                    <p class='narration'><strong>Trivia: </strong>${item.trivia}</p>
                 </div>
                 <br />
             `;
